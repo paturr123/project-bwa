@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('detail_user', function (Blueprint $table) {
+        Schema::create('thumbnail_service', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('users_id')->nullable()->index('fk_detail_user_to_users');
-            $table->longText('photo')->nullable();
-            $table->string('role')->nullable();
-            $table->string('contact_number')->nullable();
-            $table->longText('biography')->nullable();
+            $table->foreignId('service_id')->nullable()->index('fk_thumbnail_service_to_service');
+            $table->longText('thumbnail')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('detail_user');
+        Schema::dropIfExists('thumbnail_service');
     }
 };
