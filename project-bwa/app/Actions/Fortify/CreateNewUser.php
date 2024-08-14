@@ -5,7 +5,7 @@ namespace App\Actions\Fortify;
 use App\Models\Team;
 use App\Models\User;
 
-use app\Models\DetailUser;
+use App\Models\DetailUser;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;

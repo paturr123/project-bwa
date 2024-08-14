@@ -12,7 +12,7 @@ class LandingController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.landing.index');
     }
 
     /**
@@ -69,6 +69,7 @@ class LandingController extends Controller
         // $services = Service::orderBy('created_at', 'desc')->get();
 
         // return view('pages.landing.explore', compact('services'));
+        return view('pages.landing.explore');
     }
 
     public function detail($id)
@@ -80,6 +81,7 @@ class LandingController extends Controller
         // $tagline = Tagline::where('service_id', $id)->get();
 
         // return view('pages.landing.detail', compact('service','thumbnail', 'advantage_user', 'advantage_service', 'tagline'));
+        return view('pages.landing.detail');
     
     }
 
